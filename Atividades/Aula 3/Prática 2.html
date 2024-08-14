@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Cadastro de Pessoa</title>
+</head>
+<body>
+    <h1>Cadastro de Pessoa</h1>
+    <label for="nome">Nome:</label>
+    <input id="nome" type="text" name="nome" maxlength="100" required>
+    <br><br>
+    <label for="sobrenome">Sobrenome:</label>
+    <input id="sobrenome" type="text" name="sobrenome" maxlength="100" required>
+    <br><br>
+    <label for="email">E-Mail:</label>
+    <input id="email" type="email" name="email" required>
+    <br><br>
+    <label for="data-nascimento">Data de Nascimento:</label>
+    <input id="data-nascimento"type="date" name="data-nascimento" min="1920-01-01" max="2024-01-01">
+    <br><br>
+    <label for="sexo">Sexo:</label>
+    <input id="sexo_masculino" type="radio" name="sexo" value="1">
+    <label for="sexo_masculino">Masculino</label>
+    <input id="sexo_feminino" type="radio" name="sexo" value="2">
+    <label for="sexo_feminino">Feminino</label>
+    <br><br>
+    <label for="endereco">Endereço:</label>
+    <input id="endereco" type="text" name="endereco" maxlength="200">
+    <br><br>
+    <label for="cep">CEP:</label>
+    <input id="cep" type="text"  name="cep" maxlength="10">
+    <br><br>
+    <label for="cor-favorita">Cor Favorita:</label>
+    <input id="cor-favorita" type="color"  name="cor-favorita">
+    <br><br>
+    <label for="estado">Estado (UF):</label>
+    <select id="estado" name="estado">
+        <option value="">Selecione</option>
+        <option value="DF">Distrito Federal</option>
+        <option value="MS">Mato Grosso do Sul</option>
+        <option value="PR">Paraná</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="RS">Rio Grande do Sul</option>
+        <option value="SC">Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+    </select>
+</body>
+</html>
