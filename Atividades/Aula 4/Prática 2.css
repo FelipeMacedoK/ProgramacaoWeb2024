@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+}
+fieldset {
+    width: 400px;
+    background-color: rgb(224, 224, 224);
+    display: center;
+}
+ul {
+    padding: 0;
+}
+div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+    width: 275px;
+    padding-right: 125px;
+    border: solid 1px;
+    border-color: darkgray;
+    margin-bottom: 5px;
+    background-color: cornsilk;
+}
+div.botoes {
+    border: 0;
+    width: 400px;
+    padding-right: 0px;
+    text-align: center;
+    background-color: rgb(224, 224, 224);
+}
+div.nome {
+    margin-left: 0px;
+}
+div.data {
+    font-style: italic;
+}
+div.endereco {
+}
