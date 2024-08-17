@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+}
+fieldset {
+    background-color: rgb(224, 224, 224);
+}
+ul {
+    padding: 0;
+}
+div.nome {
+    margin-left: 0px;
+    padding-left: 50px;
+    background-color: cornflowerblue;
+    margin-bottom: 1%;
+}
+div.data {
+    font-style: italic;
+    padding-left: 50px;
+    background-color: gray;
+    margin-bottom: 1%;
+}
+div.endereco {
+    padding-left: 50px;
+    background-color: gray;
+}
