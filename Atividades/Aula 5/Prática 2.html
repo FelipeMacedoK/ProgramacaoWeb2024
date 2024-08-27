@@ -8,7 +8,7 @@
     <title>Tabelas</title>
 </head>
 <body>
-    <table border="1px" width="700">
+    <table border="1px" width="700" id="tabela">
         <thead>
             <tr bgcolor="gray">
                 <th rowspan="2">Aluno</th>
@@ -103,6 +103,8 @@
             </tr>
         </tbody>
     </table>
-    <button onClick="definirNotas()">Definir Notas</button>
+    <button id="definir" onClick="definirNotas()">Definir Notas</button>
+    <button id="linha" onclick="mediaLinha()" style="display: none;">Media das Notas</button>
+    <button id="coluna" onclick="mediaColuna()" style="display: none;">Media dos Alunos</button>
 </body>
 </html>
