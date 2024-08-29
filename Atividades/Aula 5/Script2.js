@@ -10,22 +10,43 @@ function definirNotas() {
 }
 
 function mediaLinha() {
-    var cell = document.getElementsByTagName("td");
-    var html = '<td><strong>Média</strong></td><td>';
-    for (let i = 2; i < 10; i++) {
-        var total = 0;
-        var media = 0;
-        for (let j = i; j < cell.length; j = j+10) {
-            total += parseFloat(cell.innerHTML);       
+    var table = document.getElementById("tabela");
+    var rows = table.getElementsByTagName('tbody')[0].rows;
+    var numColunas = rows[0].cells.length;
+    var totaisColunas = Array(numColunas).fill(0);
+    var numNotas = Array(numColunas).fill(0);
+    for (let i = 0; i < rows.length; i++) {
+        var cells = rows[i].cells;
+        for (let j = 1; j < cells.length; j++) {
+            var nota = parseFloat(cells[j].innerText.replace(',', '.'));
+                totaisColunas[j] += nota;
+                numNotas[j]++;
         }
-        media = total/6;
-        html += media + '</td><td>'
     }
-    document.createElement('tr').innerHTML = html;
-    tabela.appendChild(row);
+    var novaLinha = table.getElementsByTagName('tbody')[0].insertRow();
+    novaLinha.insertCell(0).innerText = "Média";
+    for (let j = 1; j < numColunas; j++) {
+        var media = (totaisColunas[j] / numNotas[j]).toFixed(1);
+        novaLinha.insertCell(j).innerText = media;
+    }
     document.getElementById("linha").style.display = "none";
 }
 
 function mediaColuna() {
-    document.getElementById("coluna").style.display = "none"; 
+    var table = document.getElementById("tabela");
+    var rows = table.rows;
+    for (let i = 2; i < rows.length; i++) { 
+        var row = rows[i];
+        var total = 0;
+        var numNotas = 0;
+        for (let j = 1; j < row.cells.length; j++) { 
+            var valorNota = parseFloat(row.cells[j].innerText.replace(',', '.'));
+            total += valorNota;
+            numNotas++;
+        }
+        var media = (total/numNotas).toFixed(1);
+        var cell = row.insertCell(-1);
+        cell.innerText = media;
+    }
+    document.getElementById("coluna").style.display = "none";
 }
