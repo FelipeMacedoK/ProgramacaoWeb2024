@@ -1,5 +1,7 @@
 <?php
 
+/*
+
     $pastas = array ("bsn" => array("3a fase" => array("")))
 
     function criaArvore ($aPasta, $nivel = 1) {
@@ -17,5 +19,6 @@
 
 
     criaArvore ($pastas);
+    */
 
 ?>
