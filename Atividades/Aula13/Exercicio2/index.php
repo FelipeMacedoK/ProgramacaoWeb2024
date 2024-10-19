@@ -37,15 +37,25 @@
     $pai->getEndereco()->setLogradouro("Rua José Belegante");
     $pai->getEndereco()->setBairro("Centro");
 
-    echo $felipe->getNomeCompleto() . "<br>";
-    echo $felipe->getIdade();
-    echo "<br>";
-    echo $mae->getNomeCompleto() . "<br>";
-    echo $mae->getIdade();
-    echo "<br>";    
-    echo $pai->getNomeCompleto() . "<br>";
-    echo $pai->getIdade();
+    $familia = [
+        'felipe' => $felipe,
+        'pai' => $pai,
+        'mae' => $mae
+    ];
 
-    //echo retornaNomeCompletoPessoa("Cleber", "Nardelli");
+    $conteudo = "";
 
+    foreach ($familia as $chave => $pessoa) {
+        $conteudo .= "Nome Completo: " . $pessoa->getNomeCompleto() . "\n";
+        $conteudo .= "Idade: " . $pessoa->getIdade() . " anos\n";
+        $conteudo .= "CPF/CNPJ: " . $pessoa->getCpfCnpj() . "\n";
+        $conteudo .= "Telefone: " . $pessoa->getTelefone()->getNome() . " - " . $pessoa->getTelefone()->getValor() . "\n";
+        $conteudo .= "Endereço: " . $pessoa->getEndereco()->getLogradouro() . ", Bairro: " . $pessoa->getEndereco()->getBairro() . "\n";
+        $conteudo .= "---------------------------------------\n";
+    }
+
+    $arquivo = 'familia.txt';
+    file_put_contents($arquivo, $conteudo);
+    echo "Dados salvos no arquivo 'familia.txt' com sucesso!";
+    
 ?>

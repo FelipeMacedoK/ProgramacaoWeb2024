@@ -1,0 +1,18 @@
+Nome Completo: Felipe Macedo
+Idade: 25 anos
+CPF/CNPJ: 123.456.789-11
+Telefone: Telefone Celular - 47 984571511
+Endereço: Rua Marechal, Bairro: Jardim América
+---------------------------------------
+Nome Completo: Celino Macedo
+Idade: 52 anos
+CPF/CNPJ: 111.222.333-44
+Telefone: Telefone Fixo - 47 35560135
+Endereço: Rua José Belegante, Bairro: Centro
+---------------------------------------
+Nome Completo: Nilceia Kaleski Macedo
+Idade: 49 anos
+CPF/CNPJ: 123.123.123-12
+Telefone: E-mail - nilceia@gmail.com
+Endereço: Rua José Belegante, Bairro: Centro
+---------------------------------------

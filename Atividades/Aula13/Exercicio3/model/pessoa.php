@@ -74,5 +74,15 @@
         public function setEndereco($endereco) {
             $this->endereco = $endereco;
         }
+        public function toJson() {
+                      return json_encode([
+                'nome' => $this->nome,
+                'sobreNome' => $this->sobreNome,
+                'dataNascimento' => $this->dataNascimento->format('Y-m-d'),
+                'cpfCnpj' => $this->cpfCnpj,
+                'telefone' => $this->telefone->toJson(),
+                'endereco' => $this->endereco->toJson()
+            ]);
+        }
     }
 ?>
