@@ -18,7 +18,7 @@ function exibeMensagem($mensagem) {
 exibeMensagem("Total M²: " . metroQuadrado(10,10))
 */
 
-require_once("functions.php");
+require_once("pratica1_functions.php");
 
 //Declarar arrays de dados como variáveis de escopo global
 define("notas", array(6, 8, 10, 7));
